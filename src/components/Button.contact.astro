@@ -1,0 +1,11 @@
+---
+
+interface Props {
+    children: string;
+}
+
+const { children } = Astro.props;
+---
+<button class="border rounded-full px-4 py-2 text-white font-semibold text-sm flex justify-between transition-all hover:bg-slate-900">
+    <slot />
+</button>
