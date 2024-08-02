@@ -1,0 +1,79 @@
+---
+import ButtonContact from "./ButtonContact.astro";
+---
+
+<section class="grid grid-cols-3 items-start border-red-700">
+	<div class="flex justify-center">
+		<img src="/favicon.svg" alt="icon" class="max-h-20" />
+	</div>
+	<div class="max-w-xl col-span-2">
+		<h1
+			id="textAnimate"
+			class="animation-writter overflow-hidden text-nowrap text-left text-[22px] sm:text-4xl text-transparent font-semibold bg-clip-text bg-gradient-to-b from-purple-700 to-blue-200"
+		>
+			Fullstack Developer&nbsp;
+		</h1>
+		<h1
+			class="text-xl font-bold tracking-tight text-gray-700 sm:text-3xl dark:text-white"
+		>
+			Matías Sandoval
+		</h1>
+	</div>
+	<div class="sm:col-span-1"></div>
+	<div class="max-w-xl col-span-3 sm:col-span-2">
+		<p
+			class="mt-6 text-xl text-justify text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-purple-500 [&>strong]:font-semibold dark:text-gray-300"
+		>
+			<strong>Ingeniero en Informática</strong> con 3 años de experiencia.
+		</p>
+		<p
+			class="text-xl text-justify text-gray-800 dark:[&>strong]:text-yellow-200 [&>strong]:text-purple-500 [&>strong]:font-semibold dark:text-gray-300"
+		>
+			Especializado en el desarrollo de software, con un fuerte enfoque en la
+			experiencia de usuario y la calidad del código.
+		</p>
+		<nav class="flex flex-wrap gap-2 mt-6">
+			<ButtonContact href="">Contáctame</ButtonContact>
+			<ButtonContact href="">GitHub</ButtonContact>
+			<ButtonContact href="">LinkedIn</ButtonContact>
+		</nav>
+	</div>
+</section>
+
+<style>
+	#textAnimate {
+		/* position: relative; */
+		/* top: 50%;   */
+		/* width: 10em; */
+		/* margin: 0 auto; */
+		border-right: 2px solid rgba(255, 255, 255, 0.75);
+		/* font-size: 180%; */
+		/* text-align: center;
+		white-space: nowrap;
+		overflow: hidden; */
+		/* transform: translateY(-50%);     */
+	}
+
+	/* Animation */
+	.animation-writter {
+		animation:
+			typewriter 2s steps(30) 0.5s 1 normal both,
+			blinkTextCursor 550ms steps(44) infinite normal;
+	}
+	@keyframes typewriter {
+		from {
+			width: 0;
+		}
+		to {
+			width: 100%;
+		}
+	}
+	@keyframes blinkTextCursor {
+		from {
+			border-right-color: rgba(145, 8, 199, 0.75);
+		}
+		to {
+			border-right-color: transparent;
+		}
+	}
+</style>

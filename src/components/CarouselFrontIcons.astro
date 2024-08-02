@@ -1,0 +1,162 @@
+---
+const icons = ["icon1", "icon2", "icon3", "icon4", "icon5"];
+---
+
+<div class="slider border">
+	<div class="slide-track">
+		<div class="slide">
+			<img src="html.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="css.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="react.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="astro.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="javascript.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="typescript.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="tailwind.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="react-query.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="jquery.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="bootstrap.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="radixui.svg" alt="" srcset="" />
+		</div>
+		<div class="slide">
+			<img src="vscode.svg" alt="" srcset="" />
+		</div>
+	</div>
+</div>
+
+<style>
+	.slider {
+		height: 80px;
+		margin: auto;
+		position: relative;
+		width: 100%;
+		display: grid;
+		place-items: center;
+		overflow: hidden;
+	}
+
+	.slide-track {
+		display: flex;
+		width: calc(50px * 18);
+		/* width: 100%; */
+		animation: scroll 5s linear infinite;
+	}
+
+	.slide-track:hover {
+		animation-play-state: paused;
+	}
+
+	@keyframes scroll {
+		0% {
+			transform: translateX(0);
+		}
+		100% {
+			transform: translateX(calc(-60px * 6));
+		}
+	}
+
+	.slide {
+		width: 100%;
+		/* height: 50px; */
+		display: flex;
+		align-items: center;
+		padding: 5px;
+		perspective: 100px;
+	}
+
+	.slider::before,
+	.slider::after {
+		background: linear-gradient(
+			to right,
+			rgba(255, 255, 255, 1),
+			0%,
+			rgba(255, 255, 255, 0) 100%
+		);
+		content: "";
+		position: absolute;
+		width: 15%;
+		height: 100%;
+		z-index: 2;
+	}
+
+	.slider::before {
+		left: 0;
+		top: 0;
+	}
+
+	.slider::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	/* @keyframes slide {
+		from {
+			transform: translateX(0);
+		}
+		to {
+			transform: translateX(-105.5%);
+		}
+	} */
+
+	.logos {
+		overflow: hidden;
+		/* padding: 60px 0; */
+		background: white;
+		white-space: nowrap;
+		position: relative;
+	}
+
+	.logos:before,
+	.logos:after {
+		position: absolute;
+		top: 0;
+		/* width: 250px; */
+		height: 100%;
+		content: "";
+		z-index: 2;
+	}
+
+	.logos:before {
+		left: 0;
+		background: linear-gradient(to left, rgba(255, 255, 255, 0), white);
+	}
+
+	.logos:after {
+		right: 0;
+		background: linear-gradient(to right, rgba(255, 255, 255, 0), white);
+	}
+
+	/* .logos:hover .logos-slide {
+		animation-play-state: paused;
+	} */
+
+	.logos-slide {
+		display: inline-block;
+		animation: 2s slide infinite linear;
+	}
+
+	.logos-slide img {
+		height: 50px;
+		margin: 0 40px;
+	}
+</style>
