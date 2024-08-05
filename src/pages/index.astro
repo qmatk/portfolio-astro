@@ -3,16 +3,34 @@ import CarouselFrontIcons from "../components/CarouselFrontIcons.astro";
 import CarouselBackIcons from "../components/CarouselBackIcons.astro";
 import SectionHero from "../components/SectionHero.astro";
 import Layout from "../layouts/Layout.astro";
+import SectionExperience from "../components/SectionExperience.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-	<main class="p-8 mt-20">
+	<main
+		class="p-8 space-y-20 mt-20 max-w-sm sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto"
+	>
 		<SectionHero />
-		<section class="mt-8">
+		<section class="">
 			<CarouselFrontIcons />
-		</section>
-		<section>
 			<CarouselBackIcons />
 		</section>
-	</main>
-</Layout>
+		<section class="space-y-4">
+			<h2
+				class="text-2xl font-semibold text-gray-800 dark:text-white text-center"
+			>
+				Experiencia Laboral
+			</h2>
+			<SectionExperience />
+		</section>
+		<section>
+			<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
+				Proyectos
+			</h2>
+			<p class="text-gray-600 dark:text-gray-300">
+				En esta sección encontrarás algunos de los proyectos en los que he
+				trabajado.
+			</p>
+		</section>
+	</main></Layout
+>

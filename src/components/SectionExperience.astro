@@ -1,0 +1,46 @@
+---
+export const EXPERIENCIE = [
+	{
+		date: "2022 - Actualmente...",
+		title: "Analista de Operaciones Senior - Desarrollador Web",
+		company: "Grupo MOK",
+		description:
+			"Desarrollo, mantenimiento e implementación de aplicaciones (web y ejecución) para cliente interno y externo. Encargado de integración de sistemas y automatización de procesos para el análisis de datos y continuidad operativa del área de operaciones.",
+		link: "https://twitch.tv/midudev",
+		img: "https://media.licdn.com/dms/image/C4E0BAQE1rAiOhcwDIg/company-logo_200_200/0/1631351951436?e=1730937600&v=beta&t=1rjPGozrCUaHnL9CnqvaGKZAu4LwX1DK6nS8dMt9zD0",
+	},
+	{
+		date: "2021 - 2022",
+		title: "Analista de Productos Digitales",
+		company: "Tanner Corredores de Bolsa",
+		description:
+			"Responsable la continuidad operativa, gestión, implementación y desarrollo de aplicaciones web para la corredora.",
+		img: "https://www.diarioestrategia.cl/images/showid2/3773393?w=1200&zc=4",
+	},
+];
+---
+
+{
+	EXPERIENCIE.map((experience) => {
+		return (
+			<div class="border rounded-lg bg-gray-100  grid grid-cols-3 px-8 py-4 gap-8 shadow-sm">
+				<div class="space-y-2 hidden sm:block sm:col-span-1">
+					<img src={experience.img} alt="" srcset="" class="" />
+					<p class="text-center font-medium">{experience.company}</p>
+				</div>
+				<div class="col-span-3 sm:col-span-2 space-y-2">
+					<h3 class="text-lg font-bold text-purple-500">{experience.title}</h3>
+					<div class="flex items-end gap-x-2">
+						<p class="font-medium sm:hidden">{experience.company}</p>
+						<time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80 italic">
+							{experience.date}
+						</time>
+					</div>
+					<p class="text-gray-600 dark:text-gray-300 col-span-3 sm:col-span-2 text-justify">
+						{experience.description}
+					</p>
+				</div>
+			</div>
+		);
+	})
+}
