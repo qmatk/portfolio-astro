@@ -5,6 +5,7 @@ import SectionHero from "../components/SectionHero.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionExperience from "../components/SectionExperience.astro";
 import SectionEducation from "../components/SectionEducation.astro";
+import TitleSection from "../components/TitleSection.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,38 +17,19 @@ import SectionEducation from "../components/SectionEducation.astro";
 			<CarouselFrontIcons />
 			<CarouselBackIcons />
 		</section>
-		<section class="space-y-4">
-			<h2
-				class="text-2xl font-semibold text-gray-800 dark:text-white text-center"
-			>
-				Experiencia Laboral
-			</h2>
+		<section class="space-y-6">
+			<TitleSection>Experiencia</TitleSection>
 			<SectionExperience />
 		</section>
-		<section>
-			<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
-				Proyectos
-			</h2>
-			<p class="text-gray-600 dark:text-gray-300">
-				En esta sección encontrarás algunos de los proyectos en los que he
-				trabajado.
-			</p>
+		<section class="space-y-6">
+			<TitleSection>Proyectos</TitleSection>
 		</section>
-		<section>
-			<div class="flex flex-col">
-				<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
-					Educación
-				</h2>
-				<p class="text-gray-600 dark:text-gray-300">
-					En esta sección encontrarás información sobre mi formación académica.
-				</p>
-			</div>
+		<section class="space-y-6">
+			<TitleSection>Formación</TitleSection>
 			<SectionEducation />
 		</section>
-		<section>
-			<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
-				Contacto
-			</h2>
+		<section class="space-y-6">
+			<TitleSection>Contacto</TitleSection>
 			<p class="text-gray-600 dark:text-gray-300">
 				¿Quieres contactarme? Puedes hacerlo a través de mis redes sociales o
 				enviarme un correo electrónico.
