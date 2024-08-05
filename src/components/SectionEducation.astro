@@ -1,0 +1,33 @@
+---
+const EDUCATION = [
+	{
+		degree: "Ingeniería en Informática",
+		school: "Universidad Tecnológica de Chile, Inacap",
+		date: "2018 - 2020",
+	},
+	{
+		degree: "Analista Programador",
+		school: "Centro de Formación Técnica Inacap",
+		date: "2016 - 2018",
+	},
+];
+---
+
+<ul class="space-y-4 mt-6">
+	{
+		EDUCATION.map((education) => (
+			<li>
+				<div class="flex gap-x-4 md:gap-x-10 items-start">
+					<span class="text-purple-400 rounded-full text-4xl mt-[-8px] hidden sm:block">
+						&bull;
+					</span>
+					<time class="text-gray-800 italic mt-1">{education.date}</time>
+					<div>
+						<h3 class="col-span-2 text-lg font-semibold">{education.degree}</h3>
+						<p class="font-semibold text-gray-600">{education.school}</p>
+					</div>
+				</div>
+			</li>
+		))
+	}
+</ul>

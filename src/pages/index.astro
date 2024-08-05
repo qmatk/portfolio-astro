@@ -4,6 +4,7 @@ import CarouselBackIcons from "../components/CarouselBackIcons.astro";
 import SectionHero from "../components/SectionHero.astro";
 import Layout from "../layouts/Layout.astro";
 import SectionExperience from "../components/SectionExperience.astro";
+import SectionEducation from "../components/SectionEducation.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -30,6 +31,26 @@ import SectionExperience from "../components/SectionExperience.astro";
 			<p class="text-gray-600 dark:text-gray-300">
 				En esta sección encontrarás algunos de los proyectos en los que he
 				trabajado.
+			</p>
+		</section>
+		<section>
+			<div class="flex flex-col">
+				<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
+					Educación
+				</h2>
+				<p class="text-gray-600 dark:text-gray-300">
+					En esta sección encontrarás información sobre mi formación académica.
+				</p>
+			</div>
+			<SectionEducation />
+		</section>
+		<section>
+			<h2 class="text-2xl font-semibold text-gray-800 dark:text-white">
+				Contacto
+			</h2>
+			<p class="text-gray-600 dark:text-gray-300">
+				¿Quieres contactarme? Puedes hacerlo a través de mis redes sociales o
+				enviarme un correo electrónico.
 			</p>
 		</section>
 	</main></Layout
