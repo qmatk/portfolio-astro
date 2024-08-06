@@ -1,0 +1,14 @@
+---
+import { SKILLS } from "../data/data";
+import CardSkill from "./CardSkill.astro";
+---
+
+<ul class="list-none flex flex-wrap gap-x-4">
+	{
+		SKILLS.map((skill) => (
+			<li>
+				<CardSkill skill={skill.name} level={skill.level} svg={skill.svg} />
+			</li>
+		))
+	}
+</ul>

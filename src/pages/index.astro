@@ -6,6 +6,7 @@ import CarouselBackIcons from "../components/CarouselBackIcons.astro";
 import SectionExperience from "../components/SectionExperience.astro";
 import SectionEducation from "../components/SectionEducation.astro";
 import TitleSection from "../components/TitleSection.astro";
+import CardSkill from "../components/ContainerSkills.astro";
 ---
 
 <Layout title="Welcome to Astro.">
@@ -16,6 +17,15 @@ import TitleSection from "../components/TitleSection.astro";
 		<section class="">
 			<CarouselFrontIcons />
 			<CarouselBackIcons />
+		</section>
+		<section class="space-y-6">
+			<TitleSection>Skills</TitleSection>
+			<p class="text-gray-600 dark:text-gray-300">
+				¡Hola! Soy un desarrollador web con más de 5 años de experiencia en
+				tecnologías web. Me encanta aprender y compartir conocimientos con la
+				comunidad.
+			</p>
+			<CardSkill />
 		</section>
 		<section class="space-y-6">
 			<TitleSection>Experiencia</TitleSection>
