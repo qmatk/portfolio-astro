@@ -23,13 +23,13 @@ export const EXPERIENCIE = [
 {
 	EXPERIENCIE.map((experience) => {
 		return (
-			<div class="border rounded-lg bg-gradient-to-b from-purple-50 to-purple-50/90 grid grid-cols-3 px-8 py-4 gap-8 shadow-sm">
+			<div class="border border-purple-500 rounded-lg dark:bg-transparent grid grid-cols-3 px-8 py-4 gap-8 shadow-sm">
 				<div class="space-y-2 hidden sm:block sm:col-span-1">
 					<img src={experience.img} alt="" srcset="" class="" />
 					<p class="text-center font-medium">{experience.company}</p>
 				</div>
 				<div class="col-span-3 sm:col-span-2 space-y-2">
-					<h3 class="text-lg font-bold text-purple-500">{experience.title}</h3>
+					<h3 class="text-lg font-bold text-purple-400">{experience.title}</h3>
 					<div class="flex items-end gap-x-2">
 						<p class="font-medium sm:hidden">{experience.company}</p>
 						<time class="p-0 m-0 text-sm text-gray-600/80 dark:text-white/80 italic">

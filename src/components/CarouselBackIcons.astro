@@ -2,7 +2,7 @@
 const icons = ["icon1", "icon2", "icon3", "icon4", "icon5"];
 ---
 
-<div class="slider-reverse border">
+<div class="slider-reverse">
 	<div class="slide-track-reverse">
 		<div class="slide-reverse">
 			<img src="favicon.svg" alt="" srcset="" />
@@ -42,6 +42,21 @@ const icons = ["icon1", "icon2", "icon3", "icon4", "icon5"];
 		</div>
 	</div>
 </div>
+
+<script>
+	import { slide } from "astro:transitions";
+
+	const slider = document.querySelector(".slider-reverse");
+	const slideTrack = document.querySelector(".slide-track-reverse");
+	const slides = document.querySelectorAll(".slide-reverse");
+
+	slides.forEach((slide) => {
+		const clonedSlide = slide.cloneNode(true);
+		if (slideTrack) {
+			slideTrack.appendChild(clonedSlide);
+		}
+	});
+</script>
 
 <style>
 	.slider-reverse {
